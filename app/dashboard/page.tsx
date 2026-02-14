@@ -1,4 +1,5 @@
 import { DashboardPageHeader } from '@/components/dashboard/page-header';
+import { RssFeedManager } from '@/components/dashboard/rss-feed-manager';
 
 const DashboardPage = () => {
   return (
@@ -9,7 +10,7 @@ const DashboardPage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Column - RSS Feed Manager */}
         <div>
-          <RssFeedManager />
+          <RssFeedManager/>
         </div>
 
         {/* Right Column - Newsletter Generator */}

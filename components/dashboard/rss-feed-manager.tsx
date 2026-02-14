@@ -29,7 +29,8 @@ export async function RssFeedManager() {
   const isPro = await has({ plan: 'pro' });
   const feedLimit = isPro ? Infinity : 3;
 
-  const user = await upsertUserFromClerk(userId!);
+  const user = await upsertUserFromClerk(userId!);//takes the clern user id
+  //and returns our db user record from where we can get the _id to fetch feeds
   const feeds = (await getRssFeedsByUserId(user.id)) as RssFeed[];
 
   return (
